@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Awol Negash - Web Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="nav-logo">Mohammed Awol</a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="home-section">
+        <div class="container">
+            <div class="home-content">
+                <div class="home-text">
+                    <p class="greeting">Hello, I'm</p>
+                    <h1>Mohammed Awol Negash</h1>
+                    <h2>I'm a <span class="typed-text"></span></h2>
+                    <p class="intro">
+                        Currently studying Information Systems at BahirDar University, with a passion for learning and exploring new ideas.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohammed-awol-a0463b343/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/projects?query=is%3Aopen+creator%3A%40me" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/moham_medawolnegash/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    <a href="Mohammed Awol Resume.pdf" class="btn btn-primary" download>Download CV</a>
+                </div>
+                <div class="home-image">
+                    <img src="Moha.png" alt="Mohammed Awol Negash">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="Moha.jpg" alt="About Mohammed Awol">
+                </div>
+                <div class="about-text">
+                    <h3>Web Designer & Information Systems Student</h3>
+                    <p>
+                        I am a dedicated and passionate student at BahirDar University, pursuing a degree in Information Systems. My journey in technology is driven by a curiosity to learn new things and a desire to create innovative solutions. I enjoy exploring diverse ideas and concepts, constantly seeking to expand my knowledge and skills.
+                    </p>
+                    <div class="about-details">
+                        <p><strong>Full Name:</strong> Mohammed Awol Negash</p>
+                        <p><strong>University:</strong> BahirDar University</p>
+                        <p><strong>Department:</strong> Information System</p>
+                        <p><strong>Email:</strong> <a href="mailto:awolmohammed214@gmail.com">awolmohammed214@gmail.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+251938966665">+251938966665</a></p>
+                    </div>
+                    <h4>Hobbies & Interests:</h4>
+                    <ul>
+                        <li><i class="fas fa-gamepad"></i> Playing Games</li>
+                        <li><i class="fas fa-book-open"></i> Reading</li>
+                        <li><i class="fas fa-utensils"></i> Cooking/Baking</li>
+                        <li><i class="fas fa-laptop-code"></i> Coding</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fas fa-database"></i> Database Systems & Design</div>
+                <div class="skill-item"><i class="fab fa-java"></i> Java (OOP)</div>
+                <div class="skill-item"><i class="fas fa-project-diagram"></i> System Analysis & Design</div>
+                <div class="skill-item"><i class="fas fa-network-wired"></i> Networking Fundamentals</div>
+                <div class="skill-item"><i class="fas fa-chart-bar"></i> Statistics & Data Analysis</div>
+                <div class="skill-item"><i class="fas fa-cogs"></i> Operating Systems</div>
+                <div class="skill-item"><i class="fas fa-brain"></i> Artificial Intelligence (Intro)</div>
+                <div class="skill-item"><i class="fas fa-file-code"></i> Internet Programming (Web Dev)</div>
+                <div class="skill-item"><i class="fas fa-mouse-pointer"></i> Event-Driven Programming</div>
+                <div class="skill-item"><i class="fas fa-book"></i> Research Methods</div>
+                <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="skill-item"><i class="fab fa-js-square"></i> JavaScript</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+          <h2 class="section-title" style="color: white; text-align: center;">My Projects</h2>
+          
+          <!-- Flex container for side-by-side layout -->
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+      
+            <!-- Library Management System Project -->
+            <div style="flex: 1; min-width: 300px; background-color: #1e1e1e; padding: 20px; border-radius: 8px;">
+              <h2 style="color: #00aced;">Library Management System (Java)</h2>
+              <p style="color: #ddd;">
+                Developed a comprehensive Library Management System using Java, incorporating features such as book inventory management, member registration, loan tracking, and fine calculation. The application utilizes Object-Oriented Programming principles and integrates with a MySQL database to store and retrieve data efficiently. The user interface was built using Java Swing for a responsive and intuitive experience.
+              </p>
+              <img src="lib.png" alt="Library Management System Interface"
+                   style="max-width: 100%; height: auto; margin-top: 15px; border: 1px solid #444; border-radius: 4px;">
+            </div>
+      
+            <!-- Network Connectivity Project -->
+            <div style="flex: 1; min-width: 300px; background-color: #1e1e1e; padding: 20px; border-radius: 8px;">
+              <h2 style="color: #00aced;">Network Connectivity Project (100 PCs, 5 VLANs)</h2>
+              <p style="color: #ddd;">
+                Designed a network infrastructure for connecting 100 PCs across five VLANs. Used VLAN configuration and inter-VLAN routing to ensure secure, segmented, and efficient communication. Routing allowed access between VLANs while maintaining performance and security.
+              </p>
+              <img src="cisco.png" alt="VLAN Network Topology Diagram"
+                   style="max-width: 100%; height: auto; margin-top: 15px; border: 1px solid #444; border-radius: 4px;">
+            </div>
+      
+          </div>
+      
+          <!-- GitHub Link -->
+          <div style="text-align: center; margin-top: 30px;">
+            <a href="https://github.com/projects?query=is%3Aopen+creator%3A%40me"
+               style="padding: 10px 20px; background-color: #00aced; color: white; text-decoration: none; border-radius: 5px;" target="_blank">
+              View More on GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+      
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-user"></i> Mohammed Awol Negash</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:awolmohammed214@gmail.com">awolmohammed214@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+251938966665">+251938966665</a></p>
+                    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mohammed-awol-a0463b343/" target="_blank">linkedin.com/in/mohammed-awol-a0463b343</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bahir Dar, Ethiopia (General Location)</p>
+                </div>
+                <div class="contact-form-container">
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm" method="POST" action="#"> <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                             <select name="sex" required> <option value="" disabled selected>Select Sex</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="E-mail" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="rollno" placeholder="Phone Number (+2519...)" required>
+                        </div>
+                         <div class="form-group">
+                            <input type="date" name="birthday" placeholder="Birth Date" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Mohammed Awol Negash. All Rights Reserved.</p>
+            <p>Inspired by anwarh-portfolio | Designed by You!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
