@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Typed.js initialization for Home section
+    if (document.querySelector('.typed-text')) {
+        var typed = new Typed('.typed-text', {
+            strings: ["Web Designer", "Information Systems Student", "Tech Enthusiast"],
+            typeSpeed: 70,
+            backSpeed: 50,
+            loop: true
+        });
+    }
+
 const handleSubmit = event => {
   event.preventDefault();
 
@@ -30,16 +41,6 @@ const handleSubmit = event => {
 
 document.querySelector("form").addEventListener("submit", handleSubmit);
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Typed.js initialization for Home section
-    if (document.querySelector('.typed-text')) {
-        var typed = new Typed('.typed-text', {
-            strings: ["Web Designer", "Information Systems Student", "Tech Enthusiast"],
-            typeSpeed: 70,
-            backSpeed: 50,
-            loop: true
-        });
-    }
 
     // Smooth scrolling for nav links
     const navLinks = document.querySelectorAll('.nav-menu a');
