@@ -1,7 +1,4 @@
-<!-- Typed.js (optional, if needed) -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-<script>
 document.addEventListener('DOMContentLoaded', function () {
   // Typed.js initialization
   if (document.querySelector('.typed-text')) {
@@ -45,24 +42,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Contact form submission with validation and Netlify support
+  // Contact form validation (Netlify submission allowed)
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-      if (!validateContactForm()) return;
-
-      const formData = new FormData(contactForm);
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-      })
-      .then(() => {
-        alert("Thank you for your submission!");
-        contactForm.reset();
-      })
-      .catch(error => alert("Submission failed: " + error));
+      if (!validateContactForm()) {
+        event.preventDefault(); // Only stop submission if invalid
+      }
     });
   }
 
@@ -89,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function showError(fieldName, message) {
     alert(message);
-    contactForm.querySelector(`[name="${fieldName}"]`).focus();
+    contactForm.querySelector(`[name="${fieldName}"]`)?.focus();
     return false;
   }
 
@@ -119,4 +105,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-</script>
+
