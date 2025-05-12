@@ -1,7 +1,21 @@
-// Make sure Typed.js is included in HTML before this script
-// <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-// DOM Ready
+// <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+const toggleBtn = document.getElementById('mode-toggle');
+  const body = document.body;
+
+  // Load mode from localStorage
+  if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light-mode');
+    toggleBtn.textContent = '🌞 Light Mode';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    const isLight = body.classList.contains('light-mode');
+    toggleBtn.textContent = isLight ? '🌞 Light Mode' : '🌙 Dark Mode';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+
 document.addEventListener('DOMContentLoaded', function () {
   // Typed.js initialization
   if (document.querySelector('.typed-text')) {
