@@ -1,6 +1,7 @@
+<!-- Typed.js (optional, if needed) -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-// <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
+<script>
 document.addEventListener('DOMContentLoaded', function () {
   // Typed.js initialization
   if (document.querySelector('.typed-text')) {
@@ -12,20 +13,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Form submit handler
-  const form = document.querySelector("form");
-  if (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const formData = new FormData(event.target);
-
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-      })
-        .then(() => alert("Thank you for your submission"))
-        .catch(error => alert(error));
+  // Navbar toggler
+  const navToggler = document.querySelector('.nav-toggler');
+  const navMenu = document.querySelector('.nav-menu');
+  if (navToggler && navMenu) {
+    navToggler.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggler.classList.toggle('active');
     });
   }
 
@@ -51,33 +45,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Navbar toggler
-  const navToggler = document.querySelector('.nav-toggler');
-  const navMenu = document.querySelector('.nav-menu');
-  if (navToggler && navMenu) {
-    navToggler.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      navToggler.classList.toggle('active');
-    });
-  }
-
-  // Contact form validation
+  // Contact form submission with validation and Netlify support
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (event) {
       event.preventDefault();
-      if (validateContactForm()) {
-        alert("Form submitted successfully!");
+      if (!validateContactForm()) return;
+
+      const formData = new FormData(contactForm);
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(() => {
+        alert("Thank you for your submission!");
         contactForm.reset();
-      }
+      })
+      .catch(error => alert("Submission failed: " + error));
     });
   }
 
   function validateContactForm() {
     const name = contactForm.querySelector('input[name="name"]').value.trim();
     const sex = contactForm.querySelector('select[name="sex"]').value;
-    const email = contactForm.querySelector('input[name="E-mail"]').value.trim();
-    const phone = contactForm.querySelector('input[name="rollno"]').value.trim();
+    const email = contactForm.querySelector('input[name="email"]').value.trim();
+    const phone = contactForm.querySelector('input[name="phone"]').value.trim();
     const birthdate = contactForm.querySelector('input[name="birthday"]').value.trim();
     const message = contactForm.querySelector('textarea[name="message"]').value.trim();
 
@@ -86,17 +79,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!name) return showError('name', "Name must be filled out.");
     if (!sex) return showError('sex', "Please select your sex.");
-    if (!email || !emailPattern.test(email)) return showError('E-mail', "Please enter a valid email address.");
-    if (!phone || !phonePattern.test(phone)) return showError('rollno', "Please enter a valid Ethiopian phone number starting with '+2519'.");
+    if (!email || !emailPattern.test(email)) return showError('email', "Please enter a valid email address.");
+    if (!phone || !phonePattern.test(phone)) return showError('phone', "Please enter a valid Ethiopian phone number starting with '+2519'.");
     if (!birthdate) return showError('birthday', "Please enter your birth date.");
     if (!message) return showError('message', "Please enter a message.");
 
     return true;
   }
 
-  function showError(name, message) {
+  function showError(fieldName, message) {
     alert(message);
-    contactForm.querySelector(`[name="${name}"]`).focus();
+    contactForm.querySelector(`[name="${fieldName}"]`).focus();
     return false;
   }
 
@@ -126,3 +119,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+</script>
