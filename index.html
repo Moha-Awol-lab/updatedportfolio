@@ -166,29 +166,40 @@
                 </div>
                 <div class="contact-form-container">
                     <h3>Send Me a Message</h3>
-                    <form id="contactForm" method="POST" action="#" data-netlify="true"> <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                             <select name="sex" required> <option value="" disabled selected>Select Sex</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="E-mail" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="rollno" placeholder="Phone Number (+2519...)" required>
-                        </div>
-                         <div class="form-group">
-                            <input type="date" name="birthday" placeholder="Birth Date" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    <form id="contactForm" name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact">
+
+  <div class="form-group">
+    <input type="text" name="name" placeholder="Your Name" required>
+  </div>
+
+  <div class="form-group">
+    <select name="sex" required>
+      <option value="" disabled selected>Select Sex</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <input type="email" name="E-mail" placeholder="Your Email" required>
+  </div>
+
+  <div class="form-group">
+    <input type="tel" name="rollno" placeholder="Phone Number (+2519...)" required>
+  </div>
+
+  <div class="form-group">
+    <input type="date" name="birthday" placeholder="Birth Date" required>
+  </div>
+
+  <div class="form-group">
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+
                 </div>
             </div>
         </div>
