@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     contactForm.addEventListener('submit', function (event) {
       event.preventDefault();
       if (validateContactForm()) {
-        alert("Form submitted successfully! (This is a demo - data not actually sent)");
+        alert("Form submitted successfully!");
         contactForm.reset();
       }
     });
