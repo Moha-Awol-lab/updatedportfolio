@@ -1,6 +1,5 @@
-
 document.addEventListener('DOMContentLoaded', function () {
-  // Typed.js initialization
+  // --- Typed.js initialization ---
   if (document.querySelector('.typed-text')) {
     new Typed('.typed-text', {
       strings: ["Web Designer", "Information Systems Student", "Tech Enthusiast"],
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Navbar toggler
+  // --- Navbar toggler (mobile menu) ---
   const navToggler = document.querySelector('.nav-toggler');
   const navMenu = document.querySelector('.nav-menu');
   if (navToggler && navMenu) {
@@ -20,11 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Smooth scrolling
+  // --- Smooth scrolling for navigation links ---
   const navLinks = document.querySelectorAll('.nav-menu a');
   navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
+
       const targetId = this.getAttribute('href');
       const targetElement = document.querySelector(targetId);
       const navbarHeight = document.querySelector('.navbar').offsetHeight;
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       }
 
-      // Close mobile menu
+      // Close mobile menu after clicking
       if (navMenu.classList.contains('active')) {
         navMenu.classList.remove('active');
         navToggler.classList.remove('active');
@@ -42,16 +42,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Contact form validation (Netlify submission allowed)
+  // --- Contact form validation (supports Netlify submission) ---
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (event) {
       if (!validateContactForm()) {
-        event.preventDefault(); // Only stop submission if invalid
+        event.preventDefault(); // Prevent submit if validation fails
       }
     });
   }
 
+  // Validation function for contact form fields
   function validateContactForm() {
     const name = contactForm.querySelector('input[name="name"]').value.trim();
     const sex = contactForm.querySelector('select[name="sex"]').value;
@@ -61,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const message = contactForm.querySelector('textarea[name="message"]').value.trim();
 
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    const phonePattern = /^\+2519\d{8}$/;
+    const phonePattern = /^\+2519\d{8}$/; // Ethiopian phone number format
 
     if (!name) return showError('name', "Name must be filled out.");
     if (!sex) return showError('sex', "Please select your sex.");
@@ -73,22 +74,23 @@ document.addEventListener('DOMContentLoaded', function () {
     return true;
   }
 
+  // Display error alert and focus the input
   function showError(fieldName, message) {
     alert(message);
     contactForm.querySelector(`[name="${fieldName}"]`)?.focus();
     return false;
   }
 
-  // Set current year in footer
+  // --- Set current year in footer dynamically ---
   const currentYearSpan = document.getElementById('currentYear');
   if (currentYearSpan) {
     currentYearSpan.textContent = new Date().getFullYear();
   }
 
-  // Active link highlighting on scroll
+  // --- Highlight active nav link on scroll ---
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', function () {
-    let scrollY = window.pageYOffset;
+    const scrollY = window.pageYOffset;
     const navbarHeight = document.querySelector('.navbar').offsetHeight;
 
     sections.forEach(section => {
@@ -105,4 +107,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
