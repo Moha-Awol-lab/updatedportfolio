@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed Awol Negash - Web Designer</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
@@ -20,9 +18,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#game">Games</a></li>
                 <li><a href="#contact">Contact</a></li>
-                
             </ul>
             <div class="nav-toggler">
                 <span></span>
@@ -32,431 +28,171 @@
         </div>
     </nav>
 
-   <!-- Add this to your <head> -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-<section id="home" class="relative min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-black text-white flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 bg-[url('bg-stars.gif')] bg-cover bg-center opacity-10"></div>
-
-    <div class="container mx-auto px-4 z-10" data-aos="fade-up" data-aos-duration="1500">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center backdrop-blur-md bg-white/10 p-10 rounded-3xl shadow-2xl">
-            <!-- Left Content -->
-            <div class="space-y-6">
-                <p class="text-xl text-pink-400 animate-pulse">✨ Hello, I'm</p>
-                <h1 class="text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-300 via-purple-400 to-pink-500 animate-gradient">
-                    Mohammed Awol Negash
-                </h1>
-                <h2 class="text-3xl font-medium">
-                    I'm a <span class="typed-text text-cyan-300 font-bold"></span>
-                </h2>
-                <p class="text-lg text-gray-300 max-w-md">
-                    Currently studying <span class="font-semibold text-white">Information Systems</span> at BahirDar University. Passionate about learning, building, and exploring new tech adventures!
-                </p>
-
-                <div class="flex space-x-6 text-2xl">
-                    <a href="https://www.linkedin.com/in/mohammed-awol-a0463b343/" class="hover:text-blue-400 transition duration-300" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Moha-Awol-lab/" class="hover:text-gray-400 transition duration-300" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.instagram.com/moham_medawolnegash/" class="hover:text-pink-500 transition duration-300" target="_blank"><i class="fab fa-instagram"></i></a>
+    <section id="home" class="home-section">
+        <div class="container">
+            <div class="home-content">
+                <div class="home-text">
+                    <p class="greeting">Hello, I'm</p>
+                    <h1>Mohammed Awol Negash</h1>
+                    <h2>I'm a <span class="typed-text"></span></h2>
+                    <p class="intro">
+                        Currently studying Information Systems at BahirDar University, with a passion for learning and exploring new ideas.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohammed-awol-a0463b343/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Moha-Awol-lab/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/moham_medawolnegash/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    <a href="Mohammed Awol Resume.pdf" class="btn btn-primary" download>Download CV</a>
                 </div>
-
-                <a href="Mohammed Awol Resume.pdf" class="inline-block mt-4 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:scale-105 transform transition-all duration-300 shadow-lg" download>
-                    🚀 Download Resume
-                </a>
-            </div>
-
-            <!-- Right Image -->
-            <div class="flex justify-center">
-                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl hover:scale-105 transition-transform duration-500">
-                    <img src="Moha.png" alt="Mohammed Awol Negash" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-black/20 to-white/10 mix-blend-overlay"></div>
+                <div class="home-image">
+                    <img src="Moha.png" alt="Mohammed Awol Negash">
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-
-    <section id="about" class="relative about-section py-20 bg-gradient-to-br from-purple-900 via-indigo-900 to-black text-white overflow-hidden">
-  <div class="absolute inset-0 bg-[url('bg-grid.svg')] bg-cover opacity-5 pointer-events-none"></div>
-
-  <div class="container mx-auto px-4 z-10 relative" data-aos="fade-up" data-aos-duration="1500">
-    <h2 class="text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-purple-400 to-pink-500 mb-12 animate-pulse">About Me</h2>
-
-    <div class="flex flex-col md:flex-row items-center gap-10 bg-white/10 backdrop-blur-xl p-10 rounded-3xl shadow-2xl">
-      <!-- Image -->
-      <div class="flex-shrink-0 w-60 h-60 rounded-full overflow-hidden border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300" data-aos="zoom-in">
-        <img src="Moha.jpg" alt="About Mohammed Awol" class="w-full h-full object-cover">
-      </div>
-
-      <!-- Text -->
-      <div class="space-y-6 max-w-2xl">
-        <h3 class="text-3xl font-semibold text-cyan-300">Web Designer & Information Systems Student</h3>
-        <p class="text-gray-200 leading-relaxed">
-          I'm a dedicated and passionate student at <span class="text-white font-semibold">BahirDar University</span> studying Information Systems. I'm always eager to learn, solve real-world problems, and build meaningful digital experiences. Curiosity fuels my journey.
-        </p>
-
-        <!-- Details -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 text-sm text-gray-300">
-          <p><strong class="text-white">Full Name:</strong> Mohammed Awol Negash</p>
-          <p><strong class="text-white">University:</strong> BahirDar University</p>
-          <p><strong class="text-white">Department:</strong> Information System</p>
-          <p><strong class="text-white">Email:</strong> <a href="mailto:awolmohammed214@gmail.com" class="text-blue-400 underline">awolmohammed214@gmail.com</a></p>
-          <p><strong class="text-white">Phone:</strong> <a href="tel:+251938966665" class="text-green-400 underline">+251 938 966 665</a></p>
-        </div>
-
-        <!-- Hobbies -->
-        <div>
-          <h4 class="text-xl text-pink-400 font-semibold mt-6 mb-2">Hobbies & Interests:</h4>
-          <ul class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-white text-center">
-            <li class="bg-purple-700/40 p-4 rounded-xl shadow hover:scale-105 transition transform duration-300">
-              <i class="fas fa-gamepad text-2xl mb-2 text-yellow-400"></i><br>Playing Games
-            </li>
-            <li class="bg-purple-700/40 p-4 rounded-xl shadow hover:scale-105 transition transform duration-300">
-              <i class="fas fa-book-open text-2xl mb-2 text-green-400"></i><br>Reading
-            </li>
-            <li class="bg-purple-700/40 p-4 rounded-xl shadow hover:scale-105 transition transform duration-300">
-              <i class="fas fa-utensils text-2xl mb-2 text-pink-400"></i><br>Cooking
-            </li>
-            <li class="bg-purple-700/40 p-4 rounded-xl shadow hover:scale-105 transition transform duration-300">
-              <i class="fas fa-laptop-code text-2xl mb-2 text-cyan-300"></i><br>Coding
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section id="skills" class="skills-section py-20 bg-gradient-to-tr from-indigo-900 via-purple-900 to-black text-white relative overflow-hidden">
-  <div class="absolute inset-0 bg-[url('bg-pattern.svg')] bg-repeat opacity-5 pointer-events-none"></div>
-
-  <div class="container mx-auto px-6 relative z-10" data-aos="fade-up" data-aos-duration="1500">
-    <h2 class="text-5xl font-extrabold text-center mb-14 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-400 to-pink-500 animate-pulse">
-      My Skills
-    </h2>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <!-- Skill Item -->
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-cyan-400/30">
-          <i class="fas fa-database text-3xl text-cyan-400 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">Database Systems & Design</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="150">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-purple-400/30">
-          <i class="fab fa-java text-3xl text-yellow-400 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">Java (OOP)</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-pink-400/30">
-          <i class="fas fa-project-diagram text-3xl text-pink-400 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">System Analysis & Design</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="250">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-blue-400/30">
-          <i class="fas fa-network-wired text-3xl text-blue-400 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">Networking Fundamentals</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-green-400/30">
-          <i class="fas fa-chart-bar text-3xl text-green-400 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">Statistics & Data Analysis</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="350">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-indigo-400/30">
-          <i class="fas fa-cogs text-3xl text-indigo-400 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">Operating Systems</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-purple-400/30">
-          <i class="fas fa-brain text-3xl text-purple-400 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">Artificial Intelligence (Intro)</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-orange-400/30">
-          <i class="fas fa-file-code text-3xl text-orange-400 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">Internet Programming</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-pink-300/30">
-          <i class="fas fa-mouse-pointer text-3xl text-pink-300 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">Event-Driven Programming</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="550">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-yellow-400/30">
-          <i class="fas fa-book text-3xl text-yellow-400 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">Research Methods</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-red-400/30">
-          <i class="fab fa-html5 text-3xl text-red-400 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">HTML5</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="650">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-blue-300/30">
-          <i class="fab fa-css3-alt text-3xl text-blue-300 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">CSS3</p>
-        </div>
-      </div>
-
-      <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">
-        <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition duration-300 group hover:shadow-yellow-300/30">
-          <i class="fab fa-js-square text-3xl text-yellow-300 group-hover:scale-125 transition"></i>
-          <p class="mt-4 text-lg">JavaScript</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <section id="projects" class="projects-section">
-  <div class="container">
-    <h2 class="section-title" style="color: white; text-align: center; font-size: 2.5em; margin-bottom: 40px;">
-      My Projects
-    </h2>
-
-    <!-- Flex container for side-by-side layout -->
-    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
-
-      <!-- Project Card Template -->
-      <div style="flex: 1; min-width: 300px; background: linear-gradient(145deg, #1f1f1f, #2a2a2a); padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); transition: transform 0.3s;">
-        <h3 style="color: #00aced; font-size: 1.6em;">📚 Library Management System (Java)</h3>
-        <p style="color: #ddd; line-height: 1.6;">
-          Developed a Java-based Library Management System with features like book inventory, member registration,
-          loan tracking, and fine calculation. Utilized OOP principles and MySQL for backend integration.
-          UI was built using Java Swing.
-        </p>
-        <img src="lib.png" alt="Library Management System Interface"
-             style="width: 100%; height: auto; margin-top: 15px; border-radius: 6px; border: 1px solid #444;">
-      </div>
-
-      <div style="flex: 1; min-width: 300px; background: linear-gradient(145deg, #1f1f1f, #2a2a2a); padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); transition: transform 0.3s;">
-        <h3 style="color: #00aced; font-size: 1.6em;">🌐 Network Connectivity Project</h3>
-        <p style="color: #ddd; line-height: 1.6;">
-          Designed a secure network setup for 100 PCs in 5 VLANs. Implemented VLAN segmentation and inter-VLAN routing
-          to ensure efficient communication while maintaining performance and security across departments.
-        </p>
-        <img src="cisco.png" alt="VLAN Network Topology Diagram"
-             style="width: 100%; height: auto; margin-top: 15px; border-radius: 6px; border: 1px solid #444;">
-      </div>
-
-    </div>
-
-    <!-- GitHub CTA -->
-    <div style="text-align: center; margin-top: 40px;">
-      <a href="https://github.com/Moha-Awol-lab/"
-         style="padding: 12px 30px; background-color: #00aced; color: white; text-decoration: none; border-radius: 8px; font-size: 1.1em; transition: background-color 0.3s;"
-         onmouseover="this.style.backgroundColor='#008bb9';"
-         onmouseout="this.style.backgroundColor='#00aced';"
-         target="_blank">
-        🚀 View More Projects on GitHub
-      </a>
-    </div>
-  </div>
     </section>
 
-   <section id="game" class="game-section" style="background: linear-gradient(to right, #111, #1a1a1a); padding: 60px 20px; color: white; text-align: center; font-family: 'Poppins', sans-serif;">
-  <div class="container">
-    <h2 style="font-size: 2.8em; margin-bottom: 40px; color: #00aced; animation: fadeIn 1.2s ease-in-out;">🎮 My Simple Games</h2>
-    
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-      
-      <!-- Game 1: Rock Paper Scissor -->
-      <div class="game-card" onclick="openModal('game1')">
-        <iframe src="https://rockpapperscissorgame.netlify.app/" title="Rock Paper Scissor" style="width: 100%; height: 180px; border: none; border-radius: 10px;"></iframe>
-        <p style="margin-top: 10px; font-size: 1.2em; color: #00aced;">✂️ Rock Paper Scissor</p>
-      </div>
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="Moha.jpg" alt="About Mohammed Awol">
+                </div>
+                <div class="about-text">
+                    <h3>Web Designer & Information Systems Student</h3>
+                    <p>
+                        I am a dedicated and passionate student at BahirDar University, pursuing a degree in Information Systems. My journey in technology is driven by a curiosity to learn new things and a desire to create innovative solutions. I enjoy exploring diverse ideas and concepts, constantly seeking to expand my knowledge and skills.
+                    </p>
+                    <div class="about-details">
+                        <p><strong>Full Name:</strong> Mohammed Awol Negash</p>
+                        <p><strong>University:</strong> BahirDar University</p>
+                        <p><strong>Department:</strong> Information System</p>
+                        <p><strong>Email:</strong> <a href="mailto:awolmohammed214@gmail.com">awolmohammed214@gmail.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+251938966665">+251938966665</a></p>
+                    </div>
+                    <h4>Hobbies & Interests:</h4>
+                    <ul>
+                        <li><i class="fas fa-gamepad"></i> Playing Games</li>
+                        <li><i class="fas fa-book-open"></i> Reading</li>
+                        <li><i class="fas fa-utensils"></i> Cooking/Baking</li>
+                        <li><i class="fas fa-laptop-code"></i> Coding</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <!-- Game 2: Type Master -->
-      <div class="game-card" onclick="openModal('game2')">
-        <iframe src="https://letstyp.netlify.app/" title="Type Master" style="width: 100%; height: 180px; border: none; border-radius: 10px;"></iframe>
-        <p style="margin-top: 10px; font-size: 1.2em; color: #00aced;">⌨️ Type Master</p>
-      </div>
-    </div>
-  </div>
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fas fa-database"></i> Database Systems & Design</div>
+                <div class="skill-item"><i class="fab fa-java"></i> Java (OOP)</div>
+                <div class="skill-item"><i class="fas fa-project-diagram"></i> System Analysis & Design</div>
+                <div class="skill-item"><i class="fas fa-network-wired"></i> Networking Fundamentals</div>
+                <div class="skill-item"><i class="fas fa-chart-bar"></i> Statistics & Data Analysis</div>
+                <div class="skill-item"><i class="fas fa-cogs"></i> Operating Systems</div>
+                <div class="skill-item"><i class="fas fa-brain"></i> Artificial Intelligence (Intro)</div>
+                <div class="skill-item"><i class="fas fa-file-code"></i> Internet Programming (Web Dev)</div>
+                <div class="skill-item"><i class="fas fa-mouse-pointer"></i> Event-Driven Programming</div>
+                <div class="skill-item"><i class="fas fa-book"></i> Research Methods</div>
+                <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="skill-item"><i class="fab fa-js-square"></i> JavaScript</div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Modals -->
-  <div id="game1" class="game-modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('game1')">&times;</span>
-      <iframe src="https://rockpapperscissorgame.netlify.app/" style="width: 100%; height: 90vh; border: none;"></iframe>
-    </div>
-  </div>
+    <section id="projects" class="projects-section">
+        <div class="container">
+          <h2 class="section-title" style="color: white; text-align: center;">My Projects</h2>
 
-  <div id="game2" class="game-modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('game2')">&times;</span>
-      <iframe src="https://letstyp.netlify.app/" style="width: 100%; height: 90vh; border: none;"></iframe>
-    </div>
-  </div>
+          <!-- Flex container for side-by-side layout -->
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
 
-  <!-- Styles & Scripts -->
-  <style>
-    .game-card {
-      width: 320px;
-      background: #1e1e1e;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+            <!-- Library Management System Project -->
+            <div style="flex: 1; min-width: 300px; background-color: #1e1e1e; padding: 20px; border-radius: 8px;">
+              <h2 style="color: #00aced;">Library Management System (Java)</h2>
+              <p style="color: #ddd;">
+                Developed a comprehensive Library Management System using Java, incorporating features such as book inventory management, member registration, loan tracking, and fine calculation. The application utilizes Object-Oriented Programming principles and integrates with a MySQL database to store and retrieve data efficiently. The user interface was built using Java Swing for a responsive and intuitive experience.
+              </p>
+              <img src="lib.png" alt="Library Management System Interface"
+                   style="max-width: 100%; height: auto; margin-top: 15px; border: 1px solid #444; border-radius: 4px;">
+            </div>
 
-    .game-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(0, 172, 237, 0.6);
-    }
+            <!-- Network Connectivity Project -->
+            <div style="flex: 1; min-width: 300px; background-color: #1e1e1e; padding: 20px; border-radius: 8px;">
+              <h2 style="color: #00aced;">Network Connectivity Project (100 PCs, 5 VLANs)</h2>
+              <p style="color: #ddd;">
+                Designed a network infrastructure for connecting 100 PCs across five VLANs. Used VLAN configuration and inter-VLAN routing to ensure secure, segmented, and efficient communication. Routing allowed access between VLANs while maintaining performance and security.
+              </p>
+              <img src="cisco.png" alt="VLAN Network Topology Diagram"
+                   style="max-width: 100%; height: auto; margin-top: 15px; border: 1px solid #444; border-radius: 4px;">
+            </div>
 
-    .game-modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background: rgba(0, 0, 0, 0.85);
-      z-index: 999;
-    }
-
-    .modal-content {
-      position: relative;
-      margin: 40px auto;
-      max-width: 90%;
-      height: 90vh;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      font-size: 40px;
-      color: white;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(30px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-  </style>
-
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = 'block';
-    }
-
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-
-    // Optional: Close modal on ESC key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === "Escape") {
-        document.querySelectorAll('.game-modal').forEach(modal => modal.style.display = 'none');
-      }
-    });
-  </script>
-</section>
-
-
-    <!-- CONTACT SECTION -->
-<section id="contact" class="contact-section" style="padding: 60px 20px; font-family: 'Poppins', sans-serif; transition: background 0.4s, color 0.4s;">
-  <div class="container" style="max-width: 1100px; margin: auto;">
-    <h2 class="section-title" style="text-align: center; color: var(--primary); font-size: 2.5em;">📬 Get in Touch</h2>
-
-    <div class="contact-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-top: 40px;">
-      
-      <!-- CONTACT INFO -->
-      <div class="contact-info" style="flex: 1; min-width: 300px;">
-        <h3 style="color: var(--primary);">Contact Information</h3>
-        <p><i class="fas fa-user"></i> Mohammed Awol Negash</p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:awolmohammed214@gmail.com" style="color: inherit;">awolmohammed214@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+251938966665" style="color: inherit;">+251 938 966 665</a></p>
-        <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/mohammed-awol-a0463b343" target="_blank" style="color: inherit;">linkedin.com/in/mohammed-awol-a0463b343</a></p>
-        <p><i class="fas fa-map-marker-alt"></i> Bahir Dar, Ethiopia</p>
-      </div>
-
-      <!-- CONTACT FORM -->
-      <div class="contact-form-container" style="flex: 1; min-width: 300px;">
-        <h3 style="color: var(--primary);">Send Me a Message</h3>
-        <form name="contact" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
-          <input type="hidden" name="form-name" value="contact">
-
-          <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
-          <div class="form-group">
-            <select name="sex" required>
-              <option value="" disabled selected>Select Sex</option>
-              <option>Male</option>
-              <option>Female</option>
-            </select>
           </div>
-          <div class="form-group"><input type="email" name="email" placeholder="Your Email" required></div>
-          <div class="form-group"><input type="tel" name="phone" placeholder="Phone Number (+2519...)" required></div>
-          <div class="form-group"><input type="date" name="birthday" required></div>
-          <div class="form-group"><textarea name="message" placeholder="Your Message" rows="5" required></textarea></div>
 
-          <button type="submit" class="btn-submit">Send Message</button>
-        </form>
-      </div>
-    </div>
+          <!-- GitHub Link -->
+          <div style="text-align: center; margin-top: 30px;">
+            <a href="https://github.com/Moha-Awol-lab/"
+               style="padding: 10px 20px; background-color: #00aced; color: white; text-decoration: none; border-radius: 5px;" target="_blank">
+              View More on GitHub
+            </a>
+          </div>
+        </div>
+      </section>
 
-    <!-- GOOGLE MAP EMBED -->
-    <div style="margin-top: 40px;">
-      <iframe src="https://www.google.com/maps?q=Bahir+Dar,+Ethiopia&output=embed" width="100%" height="300" frameborder="0" style="border-radius: 10px;"></iframe>
-    </div>
-  </div>
-</section>
 
-<!-- FOOTER -->
-<footer class="footer" style="text-align: center; padding: 20px; font-size: 0.9em;">
-  <p>&copy; <span id="currentYear"></span> Mohammed Awol Negash. All Rights Reserved.</p>
-  <button onclick="toggleTheme()" style="margin-top: 10px;">🌗 Toggle Theme</button>
-</footer>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-user"></i> Mohammed Awol Negash</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:awolmohammed214@gmail.com">awolmohammed214@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+251938966665">+251938966665</a></p>
+                    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mohammed-awol-a0463b343/" target="_blank">linkedin.com/in/mohammed-awol-a0463b343</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bahir Dar, Ethiopia (General Location)</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bahir Dar, Ethiopia (Temporary Location)</p>
+                </div>
+                <div class="contact-form-container">
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm" method="POST" action="#" data-netlify="true"> <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                             <select name="sex" required> <option value="" disabled selected>Select Sex</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="E-mail" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="rollno" placeholder="Phone Number (+2519...)" required>
+                        </div>
+                         <div class="form-group">
+                            <input type="date" name="birthday" placeholder="Birth Date" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- TOAST MESSAGE -->
-<div id="toast" style="position: fixed; bottom: 30px; right: 30px; background: #4caf50; color: #fff; padding: 10px 20px; border-radius: 6px; display: none;">Message sent successfully!</div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Mohammed Awol Negash. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Typed(".typed-text", {
-      strings: ["Developer", "Tech Explorer", "Information Systems Student", "Creative Thinker"],
-      typeSpeed: 80,
-      backSpeed: 50,
-      backDelay: 1500,
-      loop: true
-    });
-  });
-</script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://kit.fontawesome.com/a2e1e6d54b.js" crossorigin="anonymous"></script>
-
-<script>AOS.init();</script>
 </body>
 </html>
