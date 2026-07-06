@@ -3,204 +3,536 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Awol Negash - Web Designer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Mohammed Awol Negash | Full-Stack Software Engineer & Mobile Developer</title>
+    <meta name="description" content="Portfolio of Mohammed Awol Negash - Senior-grade Full-Stack Software Engineer and Mobile Developer specializing in Laravel, React, and Flutter. Bahir Dar University Graduate.">
+    <link rel="stylesheet" href="style.css?v=3">
+    
+    <!-- Icons & CDNs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
-    <nav class="navbar">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-outline" id="custom-cursor-outline"></div>
+
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <a href="#home" class="nav-logo">Mohammed Awol</a>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#game">Game</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <a href="#home" class="nav-logo">
+                <span class="gradient-text">Mohammed Awol</span>
+            </a>
+
+            <!-- Desktop nav links inside navbar -->
+            <ul class="nav-menu-desktop" id="nav-menu-desktop">
+                <li><a href="#home" class="nav-link active"><span>Home</span></a></li>
+                <li><a href="#about" class="nav-link"><span>About</span></a></li>
+                <li><a href="#skills" class="nav-link"><span>Skills</span></a></li>
+                <li><a href="#projects" class="nav-link"><span>Projects</span></a></li>
+                <li><a href="#games" class="nav-link"><span>Play</span></a></li>
+                <li><a href="#contact" class="nav-link"><span>Contact</span></a></li>
             </ul>
-            <div class="nav-toggler">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-sun" id="theme-icon"></i>
+                </button>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="home-section">
+    <!-- Mobile Bottom Tab Navigation (shown only on mobile) -->
+    <nav class="mobile-bottom-nav" id="nav-menu" aria-label="Mobile Navigation">
+        <a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="#about" class="nav-link"><i class="fas fa-user"></i><span>About</span></a>
+        <a href="#skills" class="nav-link"><i class="fas fa-code"></i><span>Skills</span></a>
+        <a href="#projects" class="nav-link"><i class="fas fa-briefcase"></i><span>Projects</span></a>
+        <a href="#games" class="nav-link"><i class="fas fa-gamepad"></i><span>Play</span></a>
+        <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-            <div class="home-content">
-                <div class="home-text">
-                    <p class="greeting">Hello, I'm</p>
-                    <h1>Mohammed Awol Negash</h1>
-                    <h2>I'm a <span class="typed-text"></span></h2>
-                    <p class="intro">
-                        Currently studying Information Systems at BahirDar University, with a passion for learning and exploring new ideas.
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge">
+                        <i class="fas fa-circle-notch fa-spin"></i> Available for Opportunities
+                    </div>
+                    <h1>Hi, I'm <br><span class="gradient-text">Mohammed Awol</span></h1>
+                    <h2>I am a <span class="typed-text" id="typed-text"></span></h2>
+                    <p class="hero-intro">
+                        A passionate and results-driven Software Engineer based in Addis Ababa, Ethiopia. I specialize in building enterprise-grade web platforms, highly scalable backend solutions, and beautiful cross-platform mobile applications.
                     </p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/mohammed-awol-a0463b343/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <div class="cta-group">
+                        <a href="#contact" class="btn btn-primary">Let's Connect <i class="fas fa-arrow-right btn-icon"></i></a>
+                        <a href="Mohammed_Awol_Negash_CV.pdf" class="btn btn-secondary" download>Download CV <i class="fas fa-download btn-icon"></i></a>
+                    </div>
+                    <div class="hero-socials">
                         <a href="https://github.com/Moha-Awol-lab/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mohammed-awol-a0463b343/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/moham_medawolnegash/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    <a href="Mohammed CV!!!!.pdf" class="btn btn-primary" download>Download CV</a>
+                        <a href="tel:+251938966665" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    </div>
                 </div>
-                <div class="home-image">
-                    <img src="Mohammed.jpg" alt="Mohammed Awol Negash">
+                <div class="hero-visual">
+                    <div class="profile-container">
+                        <img src="Mohammed.jpg" class="profile-image" alt="Mohammed Awol Negash Profile Image">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="about" class="about-section">
+ 
+    <!-- Stats Section -->
+    <section class="stats">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="Mohammed.jpg" alt="About Mohammed Awol">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="81">0%</div>
+                    <div class="stat-label">Exit Exam Score</div>
                 </div>
-                <div class="about-text">
-                    <h3>Web Designer & Information Systems Student</h3>
-                    <p>
-                        I am a dedicated and passionate student at BahirDar University, pursuing a degree in Information Systems. My journey in technology is driven by a curiosity to learn new things and a desire to create innovative solutions. I enjoy exploring diverse ideas and concepts, constantly seeking to expand my knowledge and skills.
+                <div class="stat-card">
+                    <div class="stat-number" data-target="3.64" data-decimals="2">0.00</div>
+                    <div class="stat-label">GPA (B.Sc IS)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="5">0+</div>
+                    <div class="stat-label">Core Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-label">Languages Spoken</div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- About Me & Journey -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Story & Journey</h2>
+                <p>A look into my academic background, career trajectory, and software development focus.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="glass-card">
+                    <h3 class="gradient-text" style="font-size: 1.8rem; margin-bottom: 1.5rem;">Who I Am</h3>
+                    <p class="about-intro-text">
+                        Motivated and detail-oriented Information Systems professional with hands-on experience in full-stack development, mobile application design, and database management.
                     </p>
-                    <div class="about-details">
-                        <p><strong>Full Name:</strong> Mohammed Awol Negash</p>
-                        <p><strong>University:</strong> BahirDar University</p>
-                        <p><strong>Department:</strong> Information System</p>
-                        <p><strong>Email:</strong> <a href="mailto:awolmohammed214@gmail.com">awolmohammed214@gmail.com</a></p>
-                        <p><strong>Phone:</strong> <a href="tel:+251938966665">+251938966665</a></p>
-                    </div>
-                    <h4>Hobbies & Interests:</h4>
-                    <ul>
-                        <li><i class="fas fa-gamepad"></i> Playing Games</li>
-                        <li><i class="fas fa-book-open"></i> Reading</li>
-                        <li><i class="fas fa-utensils"></i> Cooking/Baking</li>
-                        <li><i class="fas fa-laptop-code"></i> Coding</li>
+                    <p class="about-intro-text">
+                        Currently based in Addis Ababa, I graduated with a Bachelor of Science in Information Systems with a strong GPA of 3.64/4.00, and I am continuously expanding my finance/accounting knowledge via a BA in Accounting and Finance. I combine technical engineering capabilities with foundational knowledge in Accounting and Finance, making me uniquely positioned to develop secure, data-driven financial technologies and enterprise solutions.
+                    </p>
+                    <ul class="details-list">
+                        <li>
+                            <strong>Location</strong>
+                            Addis Ababa, Ethiopia
+                        </li>
+                        <li>
+                            <strong>Education</strong>
+                            B.Sc in Information Systems
+                        </li>
+                        <li>
+                            <strong>Secondary Study</strong>
+                            BA in Accounting & Finance (Ambassador College)
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            awolmohammed214@gmail.com
+                        </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item"><i class="fas fa-database"></i> Database Systems & Design</div>
-                <div class="skill-item"><i class="fab fa-java"></i> Java (OOP)</div>
-                <div class="skill-item"><i class="fas fa-project-diagram"></i> System Analysis & Design</div>
-                <div class="skill-item"><i class="fas fa-network-wired"></i> Networking Fundamentals</div>
-                <div class="skill-item"><i class="fas fa-chart-bar"></i> Statistics & Data Analysis</div>
-                <div class="skill-item"><i class="fas fa-cogs"></i> Operating Systems</div>
-                <div class="skill-item"><i class="fas fa-brain"></i> Artificial Intelligence (Intro)</div>
-                <div class="skill-item"><i class="fas fa-file-code"></i> Internet Programming (Web Dev)</div>
-                <div class="skill-item"><i class="fas fa-mouse-pointer"></i> Event-Driven Programming</div>
-                <div class="skill-item"><i class="fas fa-book"></i> Research Methods</div>
-                <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
-                <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
-                <div class="skill-item"><i class="fab fa-js-square"></i> JavaScript</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-        <div class="container">
-          <h2 class="section-title" style="color: white; text-align: center;">My Projects</h2>
-
-          <!-- Flex container for side-by-side layout -->
-          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-
-            <!-- Library Management System Project -->
-            <div style="flex: 1; min-width: 300px; background-color: #1e1e1e; padding: 20px; border-radius: 8px;">
-              <h2 style="color: #00aced;">Library Management System (Java)</h2>
-              <p style="color: #ddd;">
-                Developed a comprehensive Library Management System using Java, incorporating features such as book inventory management, member registration, loan tracking, and fine calculation. The application utilizes Object-Oriented Programming principles and integrates with a MySQL database to store and retrieve data efficiently. The user interface was built using Java Swing for a responsive and intuitive experience.
-              </p>
-              <img src="lib.png" alt="Library Management System Interface"
-                   style="max-width: 100%; height: auto; margin-top: 15px; border: 1px solid #444; border-radius: 4px;">
-            </div>
-
-            <!-- Network Connectivity Project -->
-            <div style="flex: 1; min-width: 300px; background-color: #1e1e1e; padding: 20px; border-radius: 8px;">
-              <h2 style="color: #00aced;">Network Connectivity Project (100 PCs, 5 VLANs)</h2>
-              <p style="color: #ddd;">
-                Designed a network infrastructure for connecting 100 PCs across five VLANs. Used VLAN configuration and inter-VLAN routing to ensure secure, segmented, and efficient communication. Routing allowed access between VLANs while maintaining performance and security.
-              </p>
-              <img src="cisco.png" alt="VLAN Network Topology Diagram"
-                   style="max-width: 100%; height: auto; margin-top: 15px; border: 1px solid #444; border-radius: 4px;">
-            </div>
-
-          </div>
-
-          <!-- GitHub Link -->
-          <div style="text-align: center; margin-top: 30px;">
-            <a href="https://github.com/Moha-Awol-lab/"
-               style="padding: 10px 20px; background-color: #00aced; color: white; text-decoration: none; border-radius: 5px;" target="_blank">
-              View More on GitHub
-            </a>
-          </div>
-        </div>
-      </section>
- <section id="game" class="contact-section" align="center"> 
-       <h2>My simple Games</h2>
-         <ul>
-             <li><a href="https://rockpapperscissorgame.netlify.app/">Rock Papper Scissor</a></li>
-             <li><a href="https://letstyp.netlify.app/">Type Master</a></li>
-         </ul>
-     <h2>My simple Apps</h2>
-     <iframe id="JotFormIFrame-260535882016558" title="Scheduling App" allow="geolocation; microphone; camera" src="https://www.jotform.com/app/260535882016558?appEmbedded=1" style="height:600px; width:375px; border: 0;"></iframe>
-     </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p><i class="fas fa-user"></i> Mohammed Awol Negash</p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:awolmohammed214@gmail.com">awolmohammed214@gmail.com</a></p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+251938966665">+251938966665</a></p>
-                    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mohammed-awol-a0463b343/" target="_blank">linkedin.com/in/mohammed-awol-a0463b343</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> Addis Ababa</p>
-                </div>
-                <div class="contact-form-container">
-                    <h3>Send Me a Message</h3>
-                    <form id="contactForm" method="POST" action="#" data-netlify="true"> <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                
+                <div class="glass-card">
+                    <h3 class="gradient-text" style="font-size: 1.8rem; margin-bottom: 1.5rem;">Experience & Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Aug 2025 - Sept 2025</div>
+                            <h4 class="timeline-title">IT Operations Professional</h4>
+                            <div class="timeline-subtitle">Ghion Homes Real Estate</div>
+                            <p class="timeline-desc">Managed local computing infrastructure, software environments, and internal technical documentation. Optimized workplace data systems, process modeling architectures, and local network diagnostics.</p>
                         </div>
-                        <div class="form-group">
-                             <select name="sex" required> <option value="" disabled selected>Select Sex</option>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Jan 2022 - Jul 2022</div>
+                            <h4 class="timeline-title">Academic Instructor</h4>
+                            <div class="timeline-subtitle">Addis Ababa, Ethiopia</div>
+                            <p class="timeline-desc">Designed and facilitated hands-on educational sessions to systematically improve student grades over a six-month tenure. Fostered strong collaborative links with parents, students, and peers while establishing clear performance evaluation and analytics loops.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Graduated June 27, 2026</div>
+                            <h4 class="timeline-title">B.Sc in Information Systems</h4>
+                            <div class="timeline-subtitle">Bahir Dar University</div>
+                            <p class="timeline-desc">Acquired strong knowledge of Database Design, Software Testing, Agile, OOP, and data structures. Achieved 81% in National Exit Exam.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Expected 2027</div>
+                            <h4 class="timeline-title">BA in Accounting and Finance</h4>
+                            <div class="timeline-subtitle">Ambassador College</div>
+                            <p class="timeline-desc">Currently pursuing a secondary degree to merge financial analytics and technology development capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Toolkit</h2>
+                <p>A collection of libraries, platforms, languages, and methodologies I leverage daily.</p>
+            </div>
+            
+            <div class="skills-grid-container">
+                <!-- Programming -->
+                <div class="skills-category glass-card">
+                    <h3>Programming</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag"><i class="fab fa-java"></i> Java (OOP)</span>
+                        <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    </div>
+                </div>
+                
+                <!-- Frameworks -->
+                <div class="skills-category glass-card">
+                    <h3>Frameworks</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag"><i class="fab fa-laravel"></i> Laravel</span>
+                        <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Flutter</span>
+                        <span class="skill-tag"><i class="fab fa-react"></i> React</span>
+                        <span class="skill-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
+                    </div>
+                </div>
+                
+                <!-- Databases & Tools -->
+                <div class="skills-category glass-card">
+                    <h3>Databases & Tools</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag"><i class="fas fa-server"></i> MySQL</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQLite</span>
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
+                        <span class="skill-tag"><i class="fas fa-laptop-code"></i> Android Studio</span>
+                    </div>
+                </div>
+
+                <!-- Software Engineering -->
+                <div class="skills-category glass-card">
+                    <h3>Methodologies</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> REST APIs</span>
+                        <span class="skill-tag"><i class="fas fa-sitemap"></i> MVC</span>
+                        <span class="skill-tag"><i class="fas fa-vial"></i> Software Testing</span>
+                        <span class="skill-tag"><i class="fas fa-tasks"></i> Agile</span>
+                        <span class="skill-tag"><i class="fas fa-brain"></i> Data Structures</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> Network Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Explore software, systems, and algorithms I have engineered.</p>
+            </div>
+            
+            <div class="project-gallery-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="project-search" placeholder="Search projects by name or technology...">
+                </div>
+                
+                <div class="filter-btn-group">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="algorithms">Algorithms</button>
+                </div>
+            </div>
+            
+            <div class="projects-grid-container" id="projects-grid">
+                <!-- SkillLink -->
+                <div class="glass-card project-card-premium" data-category="web" data-tech="laravel mysql vue react">
+                    <div class="project-image-wrapper">
+                        <img src="Moha.png" alt="SkillLink Marketplace Interface">
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tech-badge">Laravel</span>
+                            <span class="project-tech-badge">MySQL</span>
+                            <span class="project-tech-badge">Vue.js</span>
+                            <span class="project-tech-badge">React</span>
+                        </div>
+                        <h3>SkillLink Marketplace</h3>
+                        <p>A digital service-provider marketplace connecting professionals with local customers. Features robust authentication, booking calendars, automated messaging, dynamic admin dashboards, and service listings.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/Moha-Awol-lab/" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Web Application -->
+                <div class="glass-card project-card-premium" data-category="web" data-tech="laravel react vue mysql">
+                    <div class="project-image-wrapper">
+                        <img src="Moha.jpg" alt="Social Media Web Application Interface">
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tech-badge">Laravel</span>
+                            <span class="project-tech-badge">React</span>
+                            <span class="project-tech-badge">Vue</span>
+                            <span class="project-tech-badge">MySQL</span>
+                        </div>
+                        <h3>Social Hub Platform</h3>
+                        <p>High-performance social networking site. Supports dynamic content generation including posts, comment threads, responsive likes, instant notifications, custom user profile dashboards, and real-time private messages.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/Moha-Awol-lab/" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart To-Do List -->
+                <div class="glass-card project-card-premium" data-category="mobile" data-tech="flutter sqlite">
+                    <div class="project-image-wrapper">
+                        <img src="lib.png" alt="Smart To-Do List App Mockup">
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tech-badge">Flutter</span>
+                            <span class="project-tech-badge">SQLite</span>
+                        </div>
+                        <h3>Smart To-Do Application</h3>
+                        <p>Cross-platform reminder and task automation tool. Incorporates local storage using SQLite, customizable alerts/reminders, priority matrix sorting, task categories, calendar integrations, and a beautiful sleek UI design.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/Moha-Awol-lab/" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Online Marketing Management System -->
+                <div class="glass-card project-card-premium" data-category="web" data-tech="php mysql">
+                    <div class="project-image-wrapper">
+                        <img src="cisco.png" alt="Online Marketing Management System Diagram">
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tech-badge">PHP</span>
+                            <span class="project-tech-badge">MySQL</span>
+                        </div>
+                        <h3>Online Marketing Manager</h3>
+                        <p>Enterprise marketing operations coordinator. Facilitates secure campaign progress tracking, lead lifecycle analytics, customer directories, database structural optimizations, and interactive reports.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/Moha-Awol-lab/" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Mining Association Rule Explorer -->
+                <div class="glass-card project-card-premium" data-category="algorithms" data-tech="python data mining apriori">
+                    <div class="project-image-wrapper">
+                        <img src="lib.png" alt="Data Mining Association Rule Explorer View">
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tech-badge">Python</span>
+                            <span class="project-tech-badge">Data Mining</span>
+                            <span class="project-tech-badge">Apriori</span>
+                        </div>
+                        <h3>Association Rule Explorer</h3>
+                        <p>A analytical data mining system executing the Apriori association algorithm. Analyzes large transaction matrices, generates confident rules, and prints metrics such as support and lift values.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/Moha-Awol-lab/" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games & Scheduling App Section -->
+    <section id="games" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interactive Games & Apps</h2>
+                <p>Play some simple mini-games or book a scheduling calendar directly.</p>
+            </div>
+            
+            <div class="games-grid">
+                <div class="glass-card game-card">
+                    <i class="fas fa-hand-scissors"></i>
+                    <h3>Rock Paper Scissors</h3>
+                    <p>Beat the automated computer player in this classic hands game. Sleek UI with modern animations.</p>
+                    <a href="https://rockpapperscissorgame.netlify.app/" target="_blank" class="btn btn-secondary" style="margin-top: 1rem;">Play Game</a>
+                </div>
+                
+                <div class="glass-card game-card">
+                    <i class="fas fa-keyboard"></i>
+                    <h3>Type Master</h3>
+                    <p>Challenge your words per minute and accuracy rate in a highly polished dynamic typing speed competition.</p>
+                    <a href="https://letstyp.netlify.app/" target="_blank" class="btn btn-secondary" style="margin-top: 1rem;">Practice Typing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have an interesting project proposal or direct job opening? Let's discuss.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <div class="glass-card contact-card">
+                        <div class="contact-icon-wrapper">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-meta">
+                            <h4>Email Me</h4>
+                            <a href="mailto:awolmohammed214@gmail.com">awolmohammed214@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card contact-card">
+                        <div class="contact-icon-wrapper">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-meta">
+                            <h4>Call Me</h4>
+                            <a href="tel:+251938966665">+251938966665</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card contact-card">
+                        <div class="contact-icon-wrapper">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-meta">
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/mohammed-awol-a0463b343/" target="_blank">Mohammed Awol</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <form id="contactForm" name="contact" method="POST" action="#" data-netlify="true" class="contact-form">
+                        <input type="hidden" name="form-name" value="contact">
+                        <div class="form-group-custom">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group-custom">
+                            <label for="sex">Gender</label>
+                            <select id="sex" name="sex" required>
+                                <option value="" disabled selected>Select gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <input type="email" name="E-mail" placeholder="Your Email" required>
+                        <div class="form-group-custom">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
                         </div>
-                        <div class="form-group">
-                            <input type="tel" name="rollno" placeholder="Phone Number (+2519...)" required>
+                        <div class="form-group-custom">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+251912345678" required>
                         </div>
-                         <div class="form-group">
-                            <input type="date" name="birthday" placeholder="Birth Date" required>
+                        <div class="form-group-custom form-group-full">
+                            <label for="birthday">Birth Date</label>
+                            <input type="date" id="birthday" name="birthday" required>
                         </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <div class="form-group-custom form-group-full">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Describe your request..." rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div class="form-group-full" style="text-align: right;">
+                            <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane btn-icon"></i></button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer-premium">
         <div class="container">
-            <p>&copy; <span id="currentYear"></span> Mohammed Awol Negash. All Rights Reserved.</p>
+            <div class="footer-content">
+                <a href="#home" class="nav-logo" style="text-decoration: none;">
+                    <span class="gradient-text">Mohammed Awol Negash</span>
+                </a>
+                <p class="footer-copy">&copy; <span id="currentYear"></span> Mohammed Awol. Crafted with precision.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container" id="chatbot-container">
+        <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open Chatbot">
+            <i class="fas fa-comments"></i>
+            <span class="chatbot-pulse"></span>
+        </button>
+        <div class="chatbot-panel" id="chatbot-panel">
+            <div class="chatbot-header">
+                <div class="chatbot-avatar">
+                    <img src="Mohammed.jpg" alt="AI Avatar">
+                    <span class="online-indicator"></span>
+                </div>
+                <div class="chatbot-info">
+                    <h4>Moha's Assistant</h4>
+                    <p>Online</p>
+                </div>
+                <button class="chatbot-close" id="chatbot-close" aria-label="Close Chatbot">&times;</button>
+            </div>
+            <div class="chatbot-body" id="chatbot-body">
+                <div class="chat-message bot-message">
+                    Hi! I'm Moha's AI Assistant. Ask me anything about his skills, projects, experience, or education!
+                </div>
+                <div class="quick-questions">
+                    <button class="quick-quest-btn" data-question="What are your core skills?">Skills</button>
+                    <button class="quick-quest-btn" data-question="Tell me about your projects.">Projects</button>
+                    <button class="quick-quest-btn" data-question="Where did you study?">Education</button>
+                    <button class="quick-quest-btn" data-question="How can I contact you?">Contact</button>
+                </div>
+            </div>
+            <form class="chatbot-input-area" id="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Type a message..." required autocomplete="off">
+                <button type="submit" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js?v=3"></script>
 </body>
 </html>
