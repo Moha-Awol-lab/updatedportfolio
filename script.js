@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     start: 'top 80%'
                 },
                 y: 40,
-                opacity: 0,
+                opacity: 1,
                 duration: 0.8,
                 stagger: 0.2,
                 ease: 'power2.out'
